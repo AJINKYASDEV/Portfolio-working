@@ -1,169 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link href="./style.css" rel="stylesheet"/>
-    <script src="https://kit.fontawesome.com/126de4dc1a.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link href="./style.css" rel="stylesheet" />
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/126de4dc1a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div id="header">
-        <div class="container">
-            <nav>
-                <img src="./images/logo.png" class="logo">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="images-body">
-            </div>
-            <div class="header-text">
-                <p>Full Stack Java Developer</p>
-                <h1>Hi, I'm <span>Ajinkya</span><br>Sasne from Pune</h1>
-            </div>
+      <!-- Background Video -->
+      <video
+        id="bg-video"
+        class="video-js vjs-default-skin"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="images/188743-883619745.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Dark Overlay -->
+      <div class="overlay"></div>
+      <div class="container">
+        <nav>
+          <img src="./images/logo.png" class="logo" />
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="images-body"></div>
+        <div class="header-text">
+          <p>Full Stack Java Developer</p>
+          <h1>Hi, I'm <span>Ajinkya</span><br />Sasne from Pune</h1>
         </div>
+      </div>
     </div>
 
     <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="Portfolio/images/WhatsApp Image 2024-07-09 at 4.39.23 PM.jpeg">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>My self Ajinkya Sasne. I have completed B.E Computer Engineering from Savitribai Phule Pune University. I have ability of grasping new technical concepts and tools and to utilize them as and when required. I have a great enthusiasm in the Web Development. I have Course for Specialization in the field of Full Stack Java Development from CIIT Institute. My Strength is that, I am a very confident person as well as a good and quick learner. My greatest weakness is that, I sometimes have a hard time letting go of a project.</p>
-                    <div class="tab-titels">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                        <p class="tab-links" onclick="opentab('cources')">Cources</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>UI/UX</span><br>Designing Web interfaces</li>
-                            <li><span>Web Development</span><br>Website Development</li>
-                            <li><span>SQL/MySQL</span><br>DataBase Developer</li>
-                            <li><span>Java/Core Java/Advance Java</span><br>Java Developer</li>
-                            <li><span>React Js/Spring Boot</span><br>Web Development using APIs</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2015</span><br>10th SSC</li>
-                            <li><span>2015-2017</span><br>12th HSC</li>
-                            <li><span>2017-2020</span><br>BE Computer Savitribai Phule Pune University</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="cources">
-                        <ul>
-                            <li><span>2023</span><br>Full Stack Java Developer CIIT Institute</li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img
+              src="images/WhatsApp Image 2024-07-09 at 4.39.23 PM.jpeg"
+            />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              My self Ajinkya Sasne. I have completed B.E Computer Engineering
+              from Savitribai Phule Pune University. I have ability of grasping
+              new technical concepts and tools and to utilize them as and when
+              required. I have a great enthusiasm in the Web Development. I have
+              Course for Specialization in the field of Full Stack Java
+              Development from CIIT Institute. My Strength is that, I am a very
+              confident person as well as a good and quick learner. My greatest
+              weakness is that, I sometimes have a hard time letting go of a
+              project.
+            </p>
+            <div class="tab-titels">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('cources')">Cources</p>
             </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>UI/UX</span><br />Designing Web interfaces</li>
+                <li><span>Web Development</span><br />Website Development</li>
+                <li><span>SQL/MySQL</span><br />DataBase Developer</li>
+                <li>
+                  <span>Java/Core Java/Advance Java</span><br />Java Developer
+                </li>
+                <li>
+                  <span>React Js/Spring Boot</span><br />Web Development using
+                  APIs
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2015</span><br />10th SSC</li>
+                <li><span>2015-2017</span><br />12th HSC</li>
+                <li>
+                  <span>2017-2020</span><br />BE Computer Savitribai Phule Pune
+                  University
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="cources">
+              <ul>
+                <li>
+                  <span>2023</span><br />Full Stack Java Developer CIIT
+                  Institute
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    
+
     <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-sharp fa-solid fa-code"></i>
-                    <h2>Web Design</h2>
-                    <p>website Working in progress</p>
-                    <a href="#">learn more</a>
-                </div>
-                <div>
-                    <i class="fa-sharp fa-solid fa-crop"></i>
-                    <h2>UI/UX Design</h2>
-                    <p>website Working in progress</p>
-                    <a href="#">learn more</a>
-                </div>
-                <div>
-                    <i class="fa-brands fa-react"></i>
-                    <h2>React Js/Spring Boot</h2>
-                    <p>website Working in progress</p>
-                    <a href="#">learn more</a>
-                </div>
-            </div>
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-sharp fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>website Working in progress</p>
+            <a href="#">learn more</a>
+          </div>
+          <div>
+            <i class="fa-sharp fa-solid fa-crop"></i>
+            <h2>UI/UX Design</h2>
+            <p>website Working in progress</p>
+            <a href="#">learn more</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-react"></i>
+            <h2>React Js/Spring Boot</h2>
+            <p>website Working in progress</p>
+            <a href="#">learn more</a>
+          </div>
         </div>
+      </div>
     </div>
 
     <div id="projects">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="images/work-1.jpg">
-                    <div class="layer">
-                        <h3>Wheather Report</h3>
-                        <p>This Website will provide you real-time Wheather details of your place. Access the website from link down below.</p>
-                        <a href="#"><i class="fa-regular fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/work-2.jpg">
-                    <div class="layer">
-                        <h3>Ramen Eatery</h3>
-                        <p>This Website was creater for hotals to make there coustomers convenent. Access the website from link down below.</p>
-                        <a href="https://protomac1.github.io/Landing-Page-Ramen-Restaurant/Landing%20Page/src/index.html"><i class="fa-regular fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/work-3.jpg">
-                    <div class="layer">
-                        <h3>Exam Portal</h3>
-                        <p>This Website will provide the host to conduct exam online. Access the website from link down below.</p>
-                        <a href="#"><i class="fa-regular fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/work-1.jpg" />
+            <div class="layer">
+              <h3>3D Portfolio</h3>
+              <p>
+                An immersive 3D portfolio designed to showcase projects and skills through smooth interactions, depth effects, and modern visuals. 
+                It offers visitors a memorable and engaging way to explore creative and technical work.
+              </p>
+              <a href="https://3-d-portfolio-delta-ebon.vercel.app/"><i class="fa-regular fa-up-right-from-square"></i></a>
             </div>
-            <a href="#" class="btn">see more</a>
+          </div>
+          <div class="work">
+            <img src="images/work-2.jpg" />
+            <div class="layer">
+              <h3>Real Estate</h3>
+              <p>
+                A modern real estate platform built to showcase properties with elegant design, detailed listings, and intuitive navigation. 
+                It helps users explore, compare, and connect with properties seamlessly in a visually engaging experience.
+              </p>
+              <a
+                href="https://homi-rx-qjct.vercel.app/"
+                ><i class="fa-regular fa-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-3.jpg" />
+            <div class="layer">
+              <h3>Exam Portal</h3>
+              <p>
+                This Website will provide the host to conduct exam online.
+                Access the website from link down below.
+              </p>
+              <a href="#"><i class="fa-regular fa-up-right-from-square"></i></a>
+            </div>
+          </div>
         </div>
+        <a href="#" class="btn">see more</a>
+      </div>
     </div>
 
     <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p>ajinkya.sasne@gmail.com <i class="fa-solid fa-envelope"></i></p>
-                    <p>9604421095 <i class="fa-solid fa-square-phone"></i></p>
-                    <p>8668623739 <i class="fa-brands fa-whatsapp"></i></p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/profile.php?id=100071581928050"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://instagram.com/ajinkyasasne?igshid=ZDdkNTZiNTM="><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://twitter.com/AjinkyaSasne"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="https://github.com/PROTOMAC1"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/ajinkya-sasne-324b0721b"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                    <a href="Portfolio/images/Ajinkya Sasne 9604421095.pdf" download class="btn btn2">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p>ajinkya.sasne@gmail.com <i class="fa-solid fa-envelope"></i></p>
+            <p>9604421095 <i class="fa-solid fa-square-phone"></i></p>
+            <p>9604421095 <i class="fa-brands fa-whatsapp"></i></p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/profile.php?id=100071581928050"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="https://instagram.com/ajinkyasasne?igshid=ZDdkNTZiNTM="
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="https://twitter.com/AjinkyaSasne"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a href="https://github.com/AJINKYASDEV"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/ajinkya-sasne-b47123303/"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
             </div>
+            <a
+              href="images/Ajinkya 9604421095.pdf"
+              download
+              class="btn btn2"
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
         </div>
-        <div class="copyright">
-            <p>Copyright © Ajinkya. Made for Portfolio</p>
-        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright © Ajinkya. Made for Portfolio</p>
+      </div>
     </div>
 
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
